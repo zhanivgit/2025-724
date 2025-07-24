@@ -1,0 +1,15 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Each subdirectory must supply rules for building sources it contributes
+Drivers/TRACK/%.o: ../Drivers/TRACK/%.c $(GEN_OPTS) | $(GEN_FILES) $(GEN_MISC_FILES)
+	@echo 'Building file: "$<"'
+	@echo 'Invoking: Arm Compiler'
+	"D:/TI/CCS/ccs/tools/compiler/ti-cgt-armllvm_4.0.3.LTS/bin/tiarmclang.exe" -c @"device.opt"  -march=thumbv6m -mcpu=cortex-m0plus -mfloat-abi=soft -mlittle-endian -mthumb -O0 -I"C:/Users/16200/workspace_ccstheia/m0_follow_car/Drivers/LSM6DSV16X" -I"C:/Users/16200/workspace_ccstheia/m0_follow_car/Drivers/VL53L0X" -I"C:/Users/16200/workspace_ccstheia/m0_follow_car/Drivers/BUZZER" -I"C:/Users/16200/workspace_ccstheia/m0_follow_car/Drivers/TRACK" -I"C:/Users/16200/workspace_ccstheia/m0_follow_car/Drivers/Servo" -I"C:/Users/16200/workspace_ccstheia/m0_follow_car/Drivers/Motor" -I"C:/Users/16200/workspace_ccstheia/m0_follow_car/Drivers/WIT" -I"C:/Users/16200/workspace_ccstheia/m0_follow_car/Drivers/BNO08X_UART_RVC" -I"C:/Users/16200/workspace_ccstheia/m0_follow_car/Drivers/Ultrasonic_GPIO" -I"C:/Users/16200/workspace_ccstheia/m0_follow_car/Drivers/Ultrasonic_Capture" -I"C:/Users/16200/workspace_ccstheia/m0_follow_car/Drivers/OLED_Hardware_I2C" -I"C:/Users/16200/workspace_ccstheia/m0_follow_car/Drivers/OLED_Hardware_SPI" -I"C:/Users/16200/workspace_ccstheia/m0_follow_car/Drivers/OLED_Software_I2C" -I"C:/Users/16200/workspace_ccstheia/m0_follow_car/Drivers/OLED_Software_SPI" -I"C:/Users/16200/workspace_ccstheia/m0_follow_car/Drivers/MPU6050" -I"C:/Users/16200/workspace_ccstheia/m0_follow_car" -I"C:/Users/16200/workspace_ccstheia/m0_follow_car/Debug" -I"D:/TI/mspm0_sdk_2_05_01_00/source/third_party/CMSIS/Core/Include" -I"D:/TI/mspm0_sdk_2_05_01_00/source" -I"C:/Users/16200/workspace_ccstheia/m0_follow_car/Drivers/MSPM0" -DMOTION_DRIVER_TARGET_MSPM0 -DMPU6050 -D__MSPM0G3507__ -gdwarf-3 -MMD -MP -MF"Drivers/TRACK/$(basename $(<F)).d_raw" -MT"$(@)"  $(GEN_OPTS__FLAG) -o"$@" "$<"
+	@echo 'Finished building: "$<"'
+	@echo ' '
+
+

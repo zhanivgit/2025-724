@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?ccsproject version="1.0"?>
+<projectOptions>
+	<deviceFamily value="TMS470"/>
+	<connection value="common/targetdb/connections/segger_j-link_connection.xml"/>
+	<activeTargetConfiguration value="targetConfigs/MSPM0G3507.ccxml"/>
+	<isTargetConfigurationManual value="false"/>
+	<origin value="E:/trsalatec/m0循迹小车/m0_follow_car"/>
+</projectOptions>
