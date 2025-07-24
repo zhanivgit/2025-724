@@ -78,26 +78,27 @@ int main(void)
     // OLED_ShowString(17*6,4,(uint8_t *)"Gyro",8);
     while (1) 
     {
-        uint8_t track_state = Track_Get_State();
-        // Clear the line before writing to avoid artifacts
+        Track_PID_Ctrl();
+
+        // Clear previous display
         OLED_ShowString(0, 0, (uint8_t *)"                ", 16);
-        // Use a shorter label
-        OLED_ShowString(0, 0, (uint8_t *)"State:", 16);
+        OLED_ShowString(0, 2, (uint8_t *)"                ", 16);
+
+        // Display Error on line 0
+        OLED_ShowString(0, 0, (uint8_t *)"Err:", 16);
+        sprintf((char *)oled_buffer, "%-4d", Track_Get_Error());
+        OLED_ShowString(8*4, 0, oled_buffer, 16);
+
+        // Display Speeds on line 2
+        OLED_ShowString(0, 2, (uint8_t *)"L:", 16);
+        sprintf((char *)oled_buffer, "%-3d", Track_Get_Left_Speed());
+        OLED_ShowString(8*2, 2, oled_buffer, 16);
+
+        OLED_ShowString(8*7, 2, (uint8_t *)"R:", 16);
+        sprintf((char *)oled_buffer, "%-3d", Track_Get_Right_Speed());
+        OLED_ShowString(8*9, 2, oled_buffer, 16);
         
-        // Display the state as a binary value
-        for (i = 0; i < 6; i++)
-        {
-            if ((track_state >> i) & 0x01)
-            {
-                // Adjusted position to follow the new label "State:" (6 chars)
-                OLED_ShowChar(8 * (6 + i), 0, '1', 16);
-            }
-            else
-            {
-                OLED_ShowChar(8 * (6 + i), 0, '0', 16);
-            }
-        }
-        delay_ms(100);
+        delay_ms(20); // PID control loop should run reasonably fast
     }
 }
 void Motor_Ctrl(void)

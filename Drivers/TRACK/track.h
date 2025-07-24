@@ -24,4 +24,29 @@ void Track_Init(void);
  */
 uint8_t Track_Get_State(void);
 
+/**
+ * @brief  Executes one cycle of the PID line following logic.
+ * @note   This function reads the sensors, calculates the error,
+ *         computes the PID output, and sets the motor speeds.
+ */
+void Track_PID_Ctrl(void);
+
+/**
+ * @brief  Gets the last calculated PID error.
+ * @return The last error value.
+ */
+int16_t Track_Get_Error(void);
+
+/**
+ * @brief  Gets the last calculated left motor speed.
+ * @return The last left motor speed value.
+ */
+int16_t Track_Get_Left_Speed(void);
+
+/**
+ * @brief  Gets the last calculated right motor speed.
+ * @return The last right motor speed value.
+ */
+int16_t Track_Get_Right_Speed(void);
+
 #endif

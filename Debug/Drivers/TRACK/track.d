@@ -74,7 +74,8 @@ Drivers/TRACK/track.o: ../Drivers/TRACK/track.c ../Drivers/TRACK/track.h \
  D:/TI/mspm0_sdk_2_05_01_00/source/ti/driverlib/dl_vref.h \
  D:/TI/mspm0_sdk_2_05_01_00/source/ti/driverlib/dl_wwdt.h \
  D:/TI/mspm0_sdk_2_05_01_00/source/ti/driverlib/m0p/dl_interrupt.h \
- D:/TI/mspm0_sdk_2_05_01_00/source/ti/driverlib/m0p/dl_systick.h
+ D:/TI/mspm0_sdk_2_05_01_00/source/ti/driverlib/m0p/dl_systick.h \
+ C:/Users/16200/workspace_ccstheia/m0_follow_car/Drivers/Motor/motor.h
 ../Drivers/TRACK/track.h:
 ti_msp_dl_config.h:
 D:/TI/mspm0_sdk_2_05_01_00/source/ti/devices/msp/msp.h:
@@ -150,3 +151,4 @@ D:/TI/mspm0_sdk_2_05_01_00/source/ti/driverlib/dl_vref.h:
 D:/TI/mspm0_sdk_2_05_01_00/source/ti/driverlib/dl_wwdt.h:
 D:/TI/mspm0_sdk_2_05_01_00/source/ti/driverlib/m0p/dl_interrupt.h:
 D:/TI/mspm0_sdk_2_05_01_00/source/ti/driverlib/m0p/dl_systick.h:
+C:/Users/16200/workspace_ccstheia/m0_follow_car/Drivers/Motor/motor.h:
